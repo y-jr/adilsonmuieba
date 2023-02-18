@@ -9,6 +9,20 @@ menuMobile.addEventListener("click", () => {
   body.classList.toggle("menu-nav-active");
 });
 
+/**Fechar o menu quando clicado e mudar o botão de menu para hamburguer */
+const navItem = document.querySelectorAll('.nav-item')
+
+navItem.forEach(item => {
+  item.addEventListener("click", () => {
+    if(body.classList.contains("menu-nav-active")){
+      body.classList.remove("menu-nav-active");
+      menuMobile.classList.replace("bi-x", "bi-list")
+    }
+  })
+})
+
+/**Dropdown do trabalho */
+
 const trabalho1 = document.querySelector(".sublist1");
 const trabalho2 = document.querySelector(".sublist2");
 const trabalho3 = document.querySelector(".sublist3");
