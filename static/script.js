@@ -75,3 +75,24 @@ function closeSubmenu(){
   trabalho2.classList.replace("d-block", "d-none");
   trabalho3.classList.replace("d-block", "d-none");
 }
+
+/**Animaçã */
+
+const item = document.querySelectorAll("[data-anime]");
+const animeScroll = () => {
+  const windowTop = window.scrollY + window.innerHeight * 0.85
+  
+  item.forEach(element => {
+    if(windowTop > element.offsetTop){
+      element.classList.add("animate");  
+    } else{
+      element.classList.remove("animate");
+    }
+  })
+}
+
+animeScroll()
+
+window.addEventListener("scroll", () => {
+  animeScroll();
+})

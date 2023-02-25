@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-
 html,
 body {
   font-family: Ubuntu, Arial;
@@ -9,7 +8,7 @@ body {
 }
 
 /*ESTILOS GERAIS*/
-.section-bg{
+.section-bg {
   background-color: #eff5ff;
 }
 /*estilos gerais*/
@@ -198,8 +197,6 @@ section#sobre .sublist-group-item {
   font-weight: 500;
 }
 
-
-
 hr.separador {
   position: relative;
   height: 12px;
@@ -207,54 +204,47 @@ hr.separador {
   height: 2px;
 }
 
-div#cite{
+div#cite {
   font-size: 1.7rem;
   color: #000421;
-  
 }
-div#cite span{
+div#cite span {
   font-size: 1.5rem;
 }
-
 
 /**FIM DA SECÇÃO SOBRe/
 /*INÍCIO DA SECÇÃO HABILIDADES*/
 
-
-
-
-
-
 /**FIM DA SECÇÃO HABILIDADES/
 /*INÍCIO DA SECÇÃO CURRICULO*/
 
-.cv .cv-title{
+.cv .cv-title {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #050d18;
 }
-.cv .cv-item{
+.cv .cv-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative;
 }
-.cv .cv-item h4{
+.cv .cv-item h4 {
   line-height: 18px;
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #050d18;
 }
-.cv .cv-item h5{
+.cv .cv-item h5 {
   background-color: #e4edf9;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.cv .cv-item::before{
+.cv .cv-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -266,7 +256,6 @@ div#cite span{
   background: #fff;
 }
 
-
 /**FIM DA SECÇÃO CURRICULO/
 /*INÍCIO DA SECÇÃO PORTIFÓLIO*/
 
@@ -276,10 +265,9 @@ div#cite span{
 .carousel-control-next {
   margin-right: -6rem;
 }
-.carousel-indicators{
+.carousel-indicators {
   margin-bottom: -35px;
 }
-
 
 /*BARRA DE ROLAGEM*/
 *::-webkit-scrollbar {
@@ -294,18 +282,43 @@ div#cite span{
   background-color: #28235a;
 }
 
+/*ANIMAÇÃO*/
+[data-anime] {
+  opacity: 0;
+  transition: 1s;
+}
+[data-anime="down"] {
+  transform: translate3d(0, -100%, 0);
+}
+[data-anime="up"] {
+  transform: translate3d(0, 100%, 0);
+}
+[data-anime="left"] {
+  transform: translate3d(-50px, 0, 0);
+}
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 @media (max-width: 1024px) {
   .mt-mobile {
     margin-top: 1rem;
   }
-  
-.my-container {
-  width: 100%;
-}
-.carousel-control-prev {
-  margin-left: 0;
-}
-.carousel-control-next {
-  margin-right: 0;
-}
+
+  .my-container {
+    width: 100%;
+  }
+  .carousel-control-prev {
+    margin-left: 0;
+  }
+  .carousel-control-next {
+    margin-right: 0;
+  }
+  [data-anime="right"] {
+    transform: translate3d(-100%, 0, 0);
+  }
 }
