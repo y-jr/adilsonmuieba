@@ -217,11 +217,68 @@ div#cite span{
 }
 
 
-/**FIM DA SECÇÃO SOBR/
+/**FIM DA SECÇÃO SOBRe/
 /*INÍCIO DA SECÇÃO HABILIDADES*/
 
 
 
+
+
+
+/**FIM DA SECÇÃO HABILIDADES/
+/*INÍCIO DA SECÇÃO CURRICULO*/
+
+.cv .cv-title{
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+.cv .cv-item{
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+.cv .cv-item h4{
+  line-height: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+}
+.cv .cv-item h5{
+  background-color: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cv .cv-item::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -9px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #1f5297;
+  background: #fff;
+}
+
+
+/**FIM DA SECÇÃO CURRICULO/
+/*INÍCIO DA SECÇÃO PORTIFÓLIO*/
+
+.carousel-control-prev {
+  margin-left: -6rem;
+}
+.carousel-control-next {
+  margin-right: -6rem;
+}
+.carousel-indicators{
+  margin-bottom: -35px;
+}
 
 
 /*BARRA DE ROLAGEM*/
@@ -241,4 +298,14 @@ div#cite span{
   .mt-mobile {
     margin-top: 1rem;
   }
+  
+.my-container {
+  width: 100%;
+}
+.carousel-control-prev {
+  margin-left: 0;
+}
+.carousel-control-next {
+  margin-right: 0;
+}
 }
